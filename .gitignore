@@ -1,0 +1,21 @@
+# OpenVPN connection files
+*.ovpn
+
+# auth files
+*.auth
+
+# CSV files
+*.csv
+*.csv#
+
+# log files
+*.log
+
+# YML files
+*.yml
+
+# TXT files
+*.txt
+
+# DOCX Files
+*.docx
