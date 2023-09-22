@@ -19,3 +19,6 @@
 
 # DOCX Files
 *.docx
+
+# PCAP Files
+*.pcap
