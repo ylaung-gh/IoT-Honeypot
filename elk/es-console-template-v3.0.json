@@ -1,0 +1,237 @@
+PUT /hpot-pcap
+
+PUT /hpot-pcap/_mapping
+{
+    "properties": {
+        "@timestamp": {
+            "type": "date"
+        },
+        "@version": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "honeypot_b64_http_creds": {
+            "type": "text"
+        },
+        "honeypot_dst_geoip": {
+            "properties": {
+                "city_name": {
+                    "type": "keyword"
+                },
+                "continent_code": {
+                    "type": "keyword"
+                },
+                "country_name": {
+                    "type": "keyword"
+                },
+                "ip": {
+                    "type": "ip"
+                },
+                "latitude": {
+                    "type": "float"
+                },
+                "location": {
+                    "type": "geo_point"
+                },
+                "longitude": {
+                    "type": "float"
+                }
+            }
+        },
+        "honeypot_dst_ip": {
+            "type": "ip"
+        },
+        "honeypot_http_creds": {
+            "type": "keyword"
+        },
+        "honeypot_http_requested_uri": {
+            "type": "keyword"
+        },
+        "honeypot_http_user_agent": {
+            "type": "keyword"
+        },
+        "honeypot_icmp_code": {
+            "type": "long"
+        },
+        "honeypot_icmp_type": {
+            "type": "keyword"
+        },
+        "honeypot_ip_text": {
+            "type": "text"
+        },
+        "honeypot_raw_http_data": {
+            "type": "text"
+        },
+        "honeypot_src_geoip": {
+            "properties": {
+                "city_name": {
+                    "type": "keyword"
+                },
+                "continent_code": {
+                    "type": "keyword"
+                },
+                "country_name": {
+                    "type": "keyword"
+                },
+                "ip": {
+                    "type": "ip"
+                },
+                "latitude": {
+                    "type": "float"
+                },
+                "location": {
+                    "type": "geo_point"
+                },
+                "longitude": {
+                    "type": "float"
+                }
+            }
+        },
+        "honeypot_src_ip": {
+            "type": "ip"
+        },
+        "honeypot_tcp_dst_port": {
+            "type": "long"
+        },
+        "honeypot_tcp_filtered": {
+            "type": "text"
+        },
+        "honeypot_tcp_flags": {
+            "type": "text"
+        },
+        "honeypot_tcp_src_port": {
+            "type": "long"
+        },
+        "honeypot_tcp_stream": {
+            "type": "text"
+        },
+        "honeypot_udp_dst_port": {
+            "type": "long"
+        },
+        "honeypot_udp_src_port": {
+            "type": "long"
+        },
+        "host": {
+            "type": "text"
+        },
+        "tags": {
+            "type": "text"
+        },
+        "type": {
+            "type": "text"
+        }
+    }
+}
+
+PUT /hpot-mirroring
+
+PUT /hpot-mirroring/_mapping
+{
+    "properties": {
+        "@timestamp": {
+            "type": "date"
+        },
+        "@version": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "command": {
+            "type": "text"
+        },
+        "host": {
+            "type": "text"
+        },
+        "mirror_b64_http_creds": {
+            "type": "text"
+        },
+        "mirror_dst_geoip": {
+            "properties": {
+                "city_name": {
+                    "type": "keyword"
+                },
+                "continent_code": {
+                    "type": "keyword"
+                },
+                "country_name": {
+                    "type": "keyword"
+                },
+                "ip": {
+                    "type": "ip"
+                },
+                "latitude": {
+                    "type": "float"
+                },
+                "location": {
+                    "type": "geo_point"
+                },
+                "longitude": {
+                    "type": "float"
+                }
+            }
+        },
+        "mirror_dst_ip": {
+            "type": "ip"
+        },
+        "mirror_http_creds": {
+            "type": "keyword"
+        },
+        "mirror_http_requested_uri": {
+            "type": "keyword"
+        },
+        "mirror_http_user_agent": {
+            "type": "keyword"
+        },
+        "mirror_icmp_code": {
+            "type": "long"
+        },
+        "mirror_icmp_type": {
+            "type": "keyword"
+        },
+        "mirror_ip_text": {
+            "type": "text"
+        },
+        "mirror_raw_http_data": {
+            "type": "text"
+        },
+        "mirror_src_ip": {
+            "type": "ip"
+        },
+        "mirror_tcp_dst_port": {
+            "type": "long"
+        },
+        "mirror_tcp_filtered": {
+            "type": "text"
+        },
+        "mirror_tcp_flags": {
+            "type": "text"
+        },
+        "mirror_tcp_src_port": {
+            "type": "long"
+        },
+        "mirror_tcp_stream": {
+            "type": "text"
+        },
+        "mirror_udp_dst_port": {
+            "type": "long"
+        },
+        "mirror_udp_src_port": {
+            "type": "long"
+        },
+        "tags": {
+            "type": "text"
+        },
+        "type": {
+            "type": "text"
+        }
+    }
+}
