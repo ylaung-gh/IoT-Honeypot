@@ -10,6 +10,7 @@
 
 # log files
 *.log
+*.log.*
 
 # YML files
 *.yml
@@ -22,3 +23,6 @@
 
 # PCAP Files
 *.pcap
+
+# PYC Files
+*.pyc
